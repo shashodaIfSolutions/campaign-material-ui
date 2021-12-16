@@ -232,7 +232,7 @@ const App = () => {
                                    <Container maxWidth="sm">
                                         <div className={classes.buttons}>
                                              <Grid container spacing={2} justify="center">
-                                                  <Grid item xs={12} sm={12}>
+                                                  <Grid item xs={12} sm={6}>
                                                        <Autocomplete
                                                             freeSolo
                                                             id="free-solo"
@@ -254,14 +254,15 @@ const App = () => {
                                                             )}
                                                        />
                                                   </Grid>
-                                                  <Grid item xs={12} sm={12}>
-                                                       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                                  <Grid item xs={12} sm={6}>
+                                                  <Box>
                                                             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                                                                  <Tab label="Item One" {...a11yProps(0)} />
                                                                  <Tab label="Item Two" {...a11yProps(1)} />
-                                                                 <Tab label="Item Three" {...a11yProps(2)} />
                                                             </Tabs>
                                                        </Box>
+                                                  </Grid>
+                                                  <Grid item xs={12} sm={12}>
                                                        <TabPanel value={value} index={0}>
                                                             <Container className={classes.cardGrid} style={{ marginTop: '5%' }}>
                                                                  <Grid container spacing={4} justify="center">
@@ -336,49 +337,6 @@ const App = () => {
                                                             </Container>
                                                             <Container className={classes.pagination} maxWidth="sm" style={{ display: 'flex' }}>
                                                             <Stack spacing={2}>
-                                                                      <Pagination
-                                                                           count={10}
-                                                                           renderItem={(item) => (
-                                                                                <PaginationItem
-                                                                                     components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
-                                                                                     {...item}
-                                                                                />
-                                                                           )}
-                                                                      />
-                                                                 </Stack>
-                                                            </Container>
-                                                       </TabPanel>
-                                                       <TabPanel value={value} index={2}>
-                                                            <Container className={classes.cardGrid} style={{ marginTop: '5%' }}>
-                                                                 <Grid container spacing={4} justify="center">
-                                                                      {cards.map((card) => (
-                                                                           <Grid item key={card} xs={12}>
-                                                                                <Card className={classes.card} style={{ backgroundColor: '#182e41' }}>
-                                                                                     <CardContent className={classes.cardContent}>
-                                                                                          <div>
-                                                                                               <Grid container spacing={2} justify="center">
-                                                                                                    <Grid item xs={10}>
-                                                                                                         <Typography gutterBottom>
-                                                                                                              <Link href="www.google.com" target='_blank' color="inherit" style={{ color: 'white', fontWeight: 'Bold' }}>www.Google Three.com</Link>
-                                                                                                         </Typography>
-                                                                                                         <Typography style={{ color: 'white' }}>
-                                                                                                              Google Three
-                                                                                                         </Typography>
-                                                                                                    </Grid>
-                                                                                                    <Grid item xs={2} justify="center" alignItems="center" style={{ display: 'flex' }}>
-                                                                                                         <CustomCheckbox defaultChecked />
-                                                                                                    </Grid>
-                                                                                               </Grid>
-                                                                                          </div>
-
-                                                                                     </CardContent>
-                                                                                </Card>
-                                                                           </Grid>
-                                                                      ))}
-                                                                 </Grid>
-                                                            </Container>
-                                                            <Container className={classes.pagination} maxWidth="sm" style={{ display: 'flex' }}>
-                                                                 <Stack spacing={2}>
                                                                       <Pagination
                                                                            count={10}
                                                                            renderItem={(item) => (
