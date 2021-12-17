@@ -232,7 +232,7 @@ const App = () => {
                                    <Container maxWidth="sm">
                                         <div className={classes.buttons}>
                                              <Grid container spacing={2} justify="center">
-                                                  <Grid item xs={12} sm={6}>
+                                                  <Grid item xs={12} sm={5}>
                                                        <Autocomplete
                                                             freeSolo
                                                             id="free-solo"
@@ -241,7 +241,7 @@ const App = () => {
                                                             renderInput={(params) => (
                                                                  <TextField
                                                                       {...params}
-                                                                      label="Search input"
+                                                                      label="Search"
                                                                       InputProps={{
                                                                            ...params.InputProps,
                                                                            type: 'search',
@@ -254,13 +254,13 @@ const App = () => {
                                                             )}
                                                        />
                                                   </Grid>
-                                                  <Grid item xs={12} sm={6}>
+                                                  <Grid item xs={12} sm={7}>
                                                   <Box>
-                                                            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                                                                 <Tab label="Item One" {...a11yProps(0)} />
-                                                                 <Tab label="Item Two" {...a11yProps(1)} />
-                                                            </Tabs>
-                                                       </Box>
+                                                       <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                                                            <Tab label="New Campaign" {...a11yProps(0)} />
+                                                            <Tab label="Shortner URL" {...a11yProps(1)} />
+                                                       </Tabs>
+                                                  </Box>
                                                   </Grid>
                                                   <Grid item xs={12} sm={12}>
                                                        <TabPanel value={value} index={0}>
